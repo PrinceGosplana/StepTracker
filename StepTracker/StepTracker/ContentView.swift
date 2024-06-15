@@ -8,26 +8,39 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    @State private var selectedStat: HealthMetricContext = .steps
+    var isSteps: Bool { selectedStat == .steps}
     var body: some View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
-                    VStack {
-                        HStack {
-                            VStack(alignment: .leading) {
-                                Label("Steps", systemImage: "figure.walk")
-                                    .font(.title3.bold())
-                                    .foregroundStyle(.pink)
 
-                                Text("Avg: 18K Steps")
-                                    .font(.caption)
+                    Picker("Selected Stat", selection: $selectedStat) {
+                        ForEach(HealthMetricContext.allCases) { metric in
+                            Text(metric.title)
+                        }
+                    }
+                    .pickerStyle(.segmented)
+
+                    VStack {
+                        NavigationLink(value: selectedStat) {
+                            HStack {
+                                VStack(alignment: .leading) {
+                                    Label("Steps", systemImage: "figure.walk")
+                                        .font(.title3.bold())
+                                        .foregroundStyle(.pink)
+
+                                    Text("Avg: 18K Steps")
+                                        .font(.caption)
+                                        .foregroundStyle(.secondary)
+                                }
+
+                                Spacer()
+
+                                Image(systemName: "chevron.right")
                                     .foregroundStyle(.secondary)
                             }
-
-                            Spacer()
-
-                            Image(systemName: "chevron.right")
-                                .foregroundStyle(.secondary)
                         }
                         .padding(.bottom, 12)
 
@@ -59,12 +72,18 @@ struct ContentView: View {
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
                 }
             }
+
             .padding()
             .navigationTitle("Dashboard")
+            .navigationDestination(for: HealthMetricContext.self) { metric in
+                Text(metric.title)
+            }
         }
+        .tint(isSteps ? .pink : .indigo)
     }
 }
 
 #Preview {
     ContentView()
 }
+ 
