@@ -78,11 +78,6 @@ struct DashboardView: View {
             .onAppear {
                 isShowingPermissionPrimingSheet = !hasSeenPermissionPriming
             }
-            .task {
-                if hasSeenPermissionPriming {
-                    await hkManager.addSimulatorData()
-                }
-            }
             .navigationTitle("Dashboard")
             .navigationDestination(for: HealthMetricContext.self) { metric in
                 HealthDataListView(metric: metric)
