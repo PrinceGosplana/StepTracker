@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A0838A62C1DECAD00643643 /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0838A52C1DECAD00643643 /* HealthDataListView.swift */; };
+		8A1CAF0B2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */; };
 		8A2724AF2C1DB3B3001D4360 /* HealthMetricContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A2724AE2C1DB3B3001D4360 /* HealthMetricContext.swift */; };
 		8AFC2A572C1D868500152F12 /* StepTrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFC2A562C1D868500152F12 /* StepTrackerApp.swift */; };
 		8AFC2A592C1D868500152F12 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AFC2A582C1D868500152F12 /* DashboardView.swift */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		8A0838A52C1DECAD00643643 /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
+		8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		8A2724AE2C1DB3B3001D4360 /* HealthMetricContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthMetricContext.swift; sourceTree = "<group>"; };
 		8AFC2A532C1D868500152F12 /* StepTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StepTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AFC2A562C1D868500152F12 /* StepTrackerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepTrackerApp.swift; sourceTree = "<group>"; };
@@ -55,12 +57,13 @@
 		8AFC2A552C1D868500152F12 /* StepTracker */ = {
 			isa = PBXGroup;
 			children = (
-				8AFC2A562C1D868500152F12 /* StepTrackerApp.swift */,
-				8AFC2A582C1D868500152F12 /* DashboardView.swift */,
-				8A2724AE2C1DB3B3001D4360 /* HealthMetricContext.swift */,
-				8A0838A52C1DECAD00643643 /* HealthDataListView.swift */,
 				8AFC2A5A2C1D868700152F12 /* Assets.xcassets */,
+				8AFC2A582C1D868500152F12 /* DashboardView.swift */,
+				8A0838A52C1DECAD00643643 /* HealthDataListView.swift */,
+				8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */,
+				8A2724AE2C1DB3B3001D4360 /* HealthMetricContext.swift */,
 				8AFC2A5C2C1D868700152F12 /* Preview Content */,
+				8AFC2A562C1D868500152F12 /* StepTrackerApp.swift */,
 			);
 			path = StepTracker;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				8A2724AF2C1DB3B3001D4360 /* HealthMetricContext.swift in Sources */,
 				8A0838A62C1DECAD00643643 /* HealthDataListView.swift in Sources */,
 				8AFC2A572C1D868500152F12 /* StepTrackerApp.swift in Sources */,
+				8A1CAF0B2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
