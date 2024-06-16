@@ -14,6 +14,23 @@ import Observation
 
     let types: Set = [HKQuantityType(.stepCount), HKQuantityType(.bodyMass)]
 
+    func fetchStepCount() async {
+        let calendar = Calendar.current
+        let today = calendar.startOfDay(for: .now)
+        let endDate = calendar.date(byAdding: .day, value: 1, to: today)!
+        let startDate = calendar.date(byAdding: .day, value: -28, to: endDate)
+
+        let queryPredicate = HKQuery.predicateForSamples(withStart: startDate, end: endDate)
+        let samplePredicate = HKSamplePredicate.quantitySample(type: HKQuantityType(.stepCount), predicate: queryPredicate)
+        let stepQuery = HKStatisticsCollectionQueryDescriptor(predicate: samplePredicate, options: .cumulativeSum, anchorDate: endDate, intervalComponents: .init(day: 1))
+
+        let stepCounts = try! await stepQuery.result(for: store)
+
+        for steps in stepCounts.statistics() {
+            
+        }
+    }
+
     func addSimulatorData() async {
         var mockSamples: [HKQuantitySample] = []
 
