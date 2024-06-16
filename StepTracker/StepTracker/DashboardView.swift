@@ -18,14 +18,14 @@ struct DashboardView: View {
         NavigationStack {
             ScrollView {
                 VStack(spacing: 20) {
-
+                    
                     Picker("Selected Stat", selection: $selectedStat) {
                         ForEach(HealthMetricContext.allCases) {
                             Text($0.title)
                         }
                     }
                     .pickerStyle(.segmented)
-
+                    
                     VStack {
                         NavigationLink(value: selectedStat) {
                             HStack {
@@ -33,39 +33,39 @@ struct DashboardView: View {
                                     Label("Steps", systemImage: "figure.walk")
                                         .font(.title3.bold())
                                         .foregroundStyle(.pink)
-
+                                    
                                     Text("Avg: 18K Steps")
                                         .font(.caption)
                                         .foregroundStyle(.secondary)
                                 }
-
+                                
                                 Spacer()
-
+                                
                                 Image(systemName: "chevron.right")
                                     .foregroundStyle(.secondary)
                             }
                         }
                         .padding(.bottom, 12)
-
+                        
                         RoundedRectangle(cornerRadius: 12)
                             .foregroundStyle(.secondary)
                             .frame(height: 150)
                     }
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
-
+                    
                     VStack(alignment: .leading) {
                         VStack(alignment: .leading) {
                             Label("Averages", systemImage: "calendar")
                                 .font(.title3.bold())
                                 .foregroundStyle(.pink)
-
+                            
                             Text("Last 28 Days")
                                 .font(.caption)
                                 .foregroundStyle(.secondary)
                         }
                         .padding(.bottom, 12)
-
+                        
                         RoundedRectangle(cornerRadius: 12)
                             .foregroundStyle(.secondary)
                             .frame(height: 240 )
@@ -81,6 +81,7 @@ struct DashboardView: View {
             .task {
                 if hasSeenPermissionPriming {
                     await hkManager.fetchStepCount()
+                    await hkManager.fetchWeights()
                 }
             }
             .navigationTitle("Dashboard")
@@ -88,11 +89,11 @@ struct DashboardView: View {
                 HealthDataListView(metric: metric)
             }
             .sheet(isPresented: $isShowingPermissionPrimingSheet) {
-
+                
             } content: {
                 HealthKitPermissionPrimingView(hasSeen: $hasSeenPermissionPriming)
             }
-
+            
         }
         .tint(isSteps ? .pink : .indigo)
     }
