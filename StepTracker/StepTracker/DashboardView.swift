@@ -49,7 +49,7 @@ struct DashboardView: View {
                         .padding(.bottom, 12)
 
                         Chart {
-                            ForEach(hkManager.stepData) { steps in
+                            ForEach(HealthMetric.mockData) { steps in
                                 BarMark(
                                     x: .value("Date", steps.date, unit: .day),
                                     y: .value("Steps", steps.value)
@@ -103,8 +103,8 @@ struct DashboardView: View {
     }
 }
 
-//#Preview {
-//    DashboardView()
-//        .environment(HealthKitManager())
-//}
+#Preview {
+    DashboardView()
+        .environment(HealthKitManager())
+}
  
