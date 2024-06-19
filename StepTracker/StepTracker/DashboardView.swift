@@ -22,11 +22,6 @@ struct DashboardView: View {
         return totalSteps/Double(hkManager.stepData.count)
     }
 
-    var avgStepCountMock: Double {
-        let totalSteps = HealthMetric.mockData.reduce(0) { $0 + $1.value }
-        return totalSteps/Double(HealthMetric.mockData.count)
-    }
-
     var selectedHealthMetric: HealthMetric? {
         guard let rawSelectedDate else { return nil }
         return hkManager.stepData.first {
@@ -54,7 +49,7 @@ struct DashboardView: View {
                                         .font(.title3.bold())
                                         .foregroundStyle(.pink)
 
-                                    Text("Avg: \(Int(avgStepCountMock)) steps")
+                                    Text("Avg: \(avgStepCount) steps")
                                         .font(.caption)
                                         .foregroundStyle(.secondary)
                                 }
@@ -79,11 +74,11 @@ struct DashboardView: View {
                                             annotationView
                                         }
                             }
-                            RuleMark(y: .value("Average", avgStepCountMock))
+                            RuleMark(y: .value("Average", avgStepCount))
                                 .foregroundStyle(Color.secondary)
                                 .lineStyle(.init(lineWidth: 1, dash: [5, 10]))
 
-                            ForEach(HealthMetric.mockData) { steps in
+                            ForEach(hkManager.stepData) { steps in
                                 BarMark(
                                     x: .value("Date", steps.date, unit: .day),
                                     y: .value("Steps", steps.value)
