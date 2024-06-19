@@ -45,6 +45,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8A1CBF7F2C22C69900FC5246 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				8AFC2A582C1D868500152F12 /* DashboardView.swift */,
+				8A0838A52C1DECAD00643643 /* HealthDataListView.swift */,
+				8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		8A1CBF812C22C6C100FC5246 /* Charts */ = {
+			isa = PBXGroup;
+			children = (
+				8A1CBF7D2C22C05700FC5246 /* StepBarChart.swift */,
+			);
+			path = Charts;
+			sourceTree = "<group>";
+		};
+		8A1CBF822C22C6F500FC5246 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8A1CAF0F2C1F1A3F00A96130 /* HealthMetric.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8A1CBF832C22C70000FC5246 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				8A1CAF0D2C1EC5CB00A96130 /* HealthKitManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		8AFC2A4A2C1D868500152F12 = {
 			isa = PBXGroup;
 			children = (
@@ -64,16 +98,14 @@
 		8AFC2A552C1D868500152F12 /* StepTracker */ = {
 			isa = PBXGroup;
 			children = (
-				8A1CAF0C2C1EADCA00A96130 /* StepTracker.entitlements */,
 				8AFC2A5A2C1D868700152F12 /* Assets.xcassets */,
-				8AFC2A582C1D868500152F12 /* DashboardView.swift */,
-				8A0838A52C1DECAD00643643 /* HealthDataListView.swift */,
-				8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */,
+				8A1CBF812C22C6C100FC5246 /* Charts */,
 				8A2724AE2C1DB3B3001D4360 /* HealthMetricContext.swift */,
-				8A1CBF7D2C22C05700FC5246 /* StepBarChart.swift */,
-				8A1CAF0D2C1EC5CB00A96130 /* HealthKitManager.swift */,
-				8A1CAF0F2C1F1A3F00A96130 /* HealthMetric.swift */,
+				8A1CBF832C22C70000FC5246 /* Managers */,
+				8A1CBF822C22C6F500FC5246 /* Model */,
 				8AFC2A5C2C1D868700152F12 /* Preview Content */,
+				8A1CBF7F2C22C69900FC5246 /* Screens */,
+				8A1CAF0C2C1EADCA00A96130 /* StepTracker.entitlements */,
 				8AFC2A562C1D868500152F12 /* StepTrackerApp.swift */,
 			);
 			path = StepTracker;
