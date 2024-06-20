@@ -56,6 +56,7 @@ struct DashboardView: View {
             }
             .task {
                 await hkManager.fetchStepCount()
+                ChartMath.averageWeekdayCount(for: hkManager.stepData)
             }
             .navigationTitle("Dashboard")
             .navigationDestination(for: HealthMetricContext.self) { metric in

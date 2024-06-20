@@ -36,7 +36,7 @@ struct StepBarChart: View {
                             .font(.title3.bold())
                             .foregroundStyle(.pink)
 
-                        Text("Avg: \(avgStepCount) steps")
+                        Text("Avg: \(Int(avgStepCount)) steps")
                             .font(.caption)
                             .foregroundStyle(.secondary)
                     }
