@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8A0838A62C1DECAD00643643 /* HealthDataListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A0838A52C1DECAD00643643 /* HealthDataListView.swift */; };
+		8A1338FB2C294B2600A28065 /* WeightLineChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1338FA2C294B2600A28065 /* WeightLineChart.swift */; };
 		8A1CAF0B2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */; };
 		8A1CAF0E2C1EC5CB00A96130 /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CAF0D2C1EC5CB00A96130 /* HealthKitManager.swift */; };
 		8A1CAF102C1F1A3F00A96130 /* HealthMetric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8A1CAF0F2C1F1A3F00A96130 /* HealthMetric.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		8A0838A52C1DECAD00643643 /* HealthDataListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthDataListView.swift; sourceTree = "<group>"; };
+		8A1338FA2C294B2600A28065 /* WeightLineChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightLineChart.swift; sourceTree = "<group>"; };
 		8A1CAF0A2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitPermissionPrimingView.swift; sourceTree = "<group>"; };
 		8A1CAF0C2C1EADCA00A96130 /* StepTracker.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = StepTracker.entitlements; sourceTree = "<group>"; };
 		8A1CAF0D2C1EC5CB00A96130 /* HealthKitManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				8A1CBF7D2C22C05700FC5246 /* StepBarChart.swift */,
 				8A1E256A2C2543D700EAFBDC /* StepPieChart.swift */,
 				8A219F212C2413F600AB4F6D /* WeekdayChartData.swift */,
+				8A1338FA2C294B2600A28065 /* WeightLineChart.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -243,6 +246,7 @@
 				8A1CAF0E2C1EC5CB00A96130 /* HealthKitManager.swift in Sources */,
 				8A219F252C24149600AB4F6D /* Date+Ext.swift in Sources */,
 				8A0838A62C1DECAD00643643 /* HealthDataListView.swift in Sources */,
+				8A1338FB2C294B2600A28065 /* WeightLineChart.swift in Sources */,
 				8AFC2A572C1D868500152F12 /* StepTrackerApp.swift in Sources */,
 				8A1E256B2C2543D700EAFBDC /* StepPieChart.swift in Sources */,
 				8A1CAF0B2C1EA41200A96130 /* HealthKitPermissionPrimingView.swift in Sources */,
