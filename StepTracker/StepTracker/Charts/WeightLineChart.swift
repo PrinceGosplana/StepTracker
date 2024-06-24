@@ -36,10 +36,20 @@ struct WeightLineChart: View {
             .padding(.bottom, 12)
 
             Chart {
-                ForEach(chartData) { weights in
+                ForEach(chartData) { weight in
+                    AreaMark(
+                        x: .value("Day", weight.date, unit: .day),
+                        y: .value("Value", weight.value)
+                    )
+                    .foregroundStyle(Gradient(colors: [.blue.opacity(0.5), .clear]))
 
+                    LineMark(
+                        x: .value("Day", weight.date, unit: .day),
+                        y: .value("Value", weight.value)
+                    )
                 }
             }
+            .frame(height: 150)
         }
         .padding()
         .background(RoundedRectangle(cornerRadius: 12).fill(Color(.secondarySystemBackground)))
