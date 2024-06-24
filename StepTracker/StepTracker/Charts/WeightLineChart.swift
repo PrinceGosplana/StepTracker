@@ -47,5 +47,5 @@ struct WeightLineChart: View {
 }
 
 #Preview {
-    WeightLineChart(selectedStat: .weight, chartData: HealthMetric.mockData)
+    WeightLineChart(selectedStat: .weight, chartData: MockData.weights)
 }
