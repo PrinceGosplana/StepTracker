@@ -39,6 +39,7 @@ struct DashboardView: View {
             }
             .task {
                 await hkManager.fetchStepCount()
+                await hkManager.fetchWeights()
             }
             .navigationTitle("Dashboard")
             .navigationDestination(for: HealthMetricContext.self) { metric in
